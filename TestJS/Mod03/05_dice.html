@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Start() {
+            document.getElementById("img1").src = "../Images/start.gif";
+            document.getElementById("img2").src = "../Images/start.gif";
+            document.getElementById("img3").src = "../Images/start.gif";
+            document.getElementById("audio1").play();
+        }
+
+        function Stop() {
+            document.getElementById("audio1").pause();
+            var num1 = Math.floor(Math.random() * 6 + 1);
+            var num2 = Math.floor(Math.random() * 6 + 1);
+            var num3 = Math.floor(Math.random() * 6 + 1);
+            var total = num1 + num2 + num3;
+
+            var msg = "開 ";
+            msg += num1 + ", " + num2 + ", " + num3 + "  " + "合計" + total + "點  \n";
+
+            if (num1 == num2 && num2 == num3)
+                msg += "豹子通殺!!";
+            else {
+                msg += total % 2 == 0 ? "總和為雙 " : "總和為單 ";
+                msg += (total >= 4 && total <= 10) ? "小" : "大";
+            }
+
+            console.log(msg);
+            document.getElementById("Msg").innerText = msg;
+            document.getElementById("img1").src = "../Images/dice-" + num1 + ".png";
+            document.getElementById("img2").src = "../Images/dice-" + num2 + ".png";
+            document.getElementById("img3").src = "../Images/dice-" + num3 + ".png";
+        };
+
+
+    </script>
+</head>
+<body>
+    <audio id="audio1" loop>
+        <source src="../Media/dice.mp3" type="audio/mpeg" />
+    </audio>
+    <img src="../Images/desk.jpg" />
+    <button Id="Btn_start" onclick="Start();">開骰</button>
+    <button Id="Btn_stop" onclick="Stop();">停止</button>
+
+    <h1 id="Msg"></h1>
+    <img id="img1" src="../Images/dice-1.png" />
+    <img id="img2" src="../Images/dice-1.png" />
+    <img id="img3" src="../Images/dice-1.png" />
+</body>
+</html>

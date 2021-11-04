@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, error
+        //aFunction();
+
+        //2, 
+        //try {
+        //    aFunction();
+        //} catch (e) {
+        //    console.log(e);
+        //}
+
+        //3, 
+        try {
+            aFunction();
+        } catch (e) {
+            console.log("message: " + e.message);
+            console.log("name: " + e.name);
+            console.log("stack: " + e.stack);
+            console.log("toString: " + e.toString());
+        }
+        finally {
+            console.log("Finally...");
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

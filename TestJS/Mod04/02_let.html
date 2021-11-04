@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, global scope
+        var a = 10;
+
+        function test() {
+
+            //2, function scope
+            var b = 20;
+
+            if (true) {
+                //3,  function scope
+                var c = 30;
+                //4, block scope
+                let d = 40;
+
+                console.log(a);
+                console.log(b);
+                console.log(c);
+                console.log(d);
+            }
+
+        }
+        test();
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

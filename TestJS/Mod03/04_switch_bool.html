@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        var day = prompt("Enter 1~7:", "7");
+        var msg = "今天要";
+
+        //1,
+        if (day >= 1 && day <= 5)
+            msg += "上班";
+        else if (day == 6 || day == 7)
+            msg += "放假";
+        else
+            msg = "輸入錯誤!!";
+
+        //2,
+        //switch (true) {
+        //    case day >= 1 && day <= 5:
+        //        msg += "上班";
+        //        break;
+        //    case day == 6 || day == 7:
+        //        msg += "放假";
+        //        break;
+        //    default:
+        //        msg = "輸入錯誤!!";
+        //        break;
+        //};
+
+
+
+        console.log(msg);  // 今天要放假
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

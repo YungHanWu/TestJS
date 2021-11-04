@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, global scope
+        //var a = 10;
+        //b = 20;
+
+        //alert("a = " + a);
+        //alert("b = " + b);
+        //alert("window.a = " + window.a);
+        //alert("window.b = " + window.b);
+
+        //2,
+        function test() {
+            //local scope(function scope)
+            var a = 10;
+            //global scope
+            b = 20;
+
+            alert("a = " + a);
+            alert("b = " + b);
+        }
+        test();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

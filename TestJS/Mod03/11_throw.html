@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/Utils.js"></script>
+    <script>
+
+        //1,
+        //var total = add(3, 5);
+        //console.log("Total = " + total);
+
+        //2, error
+        //var total = add("aa", 5);
+        //console.log("Total = " + total);
+
+        //3, try(string)
+        //try {
+        //    var total = add("aa", 5);
+        //    console.log("Total = " + total);
+        //} catch (e) {
+        //    console.log(e);
+        //}
+
+        //4, try(object)
+        try {
+            var total = add("aa", 5);
+            console.log("Total = " + total);
+        } catch (e) {
+            console.log("message: " + e.message);
+            console.log("name: " + e.name);
+            console.log("stack: " + e.stack);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
