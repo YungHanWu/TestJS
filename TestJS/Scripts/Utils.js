@@ -2,13 +2,11 @@
  * Title : UCOM Utilities Script
  * Description: xxxxxxxxxxxxxx
  * Author: Jerry, John
- * Version: v0.1
+ * Version: v0.2
  */
-function Hello() {
-    alert("Hello!!");
-}
+let Hello = () => alert("Hello!!");
 
-function add(x, y) {
+let add = (x, y) => {
     //if (typeof x != "number" || typeof y != "number")
     //    throw "參數必須是數值!!";
     if (typeof x != "number" || typeof y != "number") {
@@ -16,4 +14,12 @@ function add(x, y) {
     }
 
     return x + y;
+}
+
+let sum = (name, ...scores) => {
+    var total = 0;
+    for (var score of scores) {
+        total += score;
+    }
+    return name + " 的總分 = " + total;
 }

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, 別人寫的功能，假設用來計算獎金
+        function calc(functionName, data) {
+            return functionName(data);
+        }
+
+
+        //2, 公式1, 公式2
+        function double(x) {
+            return x * 2;
+        }
+        function triple(x) {
+            return x * 3;
+        }
+
+
+        //3, 呼叫計算獎金功能，並傳入公式以及資料
+        //var result = calc(double, 2); //4
+        var result = calc(triple, 3); //9
+        console.log(result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

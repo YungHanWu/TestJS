@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, 
+        //console.log(window.name);
+        //var name = "John";
+        //console.log(window.name);
+
+        //2, global scope
+        //var name = "John";
+        //var age = 25;
+        //var email = "john@uuu.com.tw";
+        //console.log(name + " -- " + age + " -- " + email);
+
+        //3, function scope
+        //function test() {
+        //    var name = "John";
+        //    var age = 25;
+        //    var email = "john@uuu.com.tw";
+        //    console.log(name + " -- " + age + " -- " + email);
+        //}
+        //test();
+
+        //4, Immed Invoke Function 立即函示 馬上會執行 可以避免與全域變數名稱衝突 或是用let宣告
+        (function () {
+            var name = "John";
+            var age = 25;
+            var email = "john@uuu.com.tw";
+            console.log(name + " -- " + age + " -- " + email);
+        })();
+
+        (function (name) {
+            console.log("Hello, " + name);
+        })("John");
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

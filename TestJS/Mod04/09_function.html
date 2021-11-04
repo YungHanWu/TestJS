@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //normal function
+        function print() {
+            console.log("Print...");
+        }
+        print();
+
+        //anonymous function
+        var print2 = function () {
+            console.log("Print 2...");
+        }
+        print2();
+
+        var print3 = function (name) {
+            console.log("Print 3... " + name);
+        }
+        print3("John");
+
+        var print4 = function (name) {
+            return "Print 4... " + name;
+        }
+        console.log(print4("Mary"));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

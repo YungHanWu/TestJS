@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, old callback
+        //var print = function (getUserName) {
+        //    return "Hello , " + getUserName();
+        //}
+
+        //function callback() {
+        //    return "Mary";
+        //}
+        //var result = print(callback);
+        //console.log(result);   //Hello , Mary
+
+        //2, old callback
+        var print = function (getUserName) {
+            return "Hello , " + getUserName();
+        }
+        var result = print(function () {
+            return "Mary";
+        });
+        console.log(result);   //Hello , Mary
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

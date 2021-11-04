@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, parameter life
+        function hello(name) {
+            console.log("Hello, " + name);
+        }
+        hello("John");
+
+        //2, closure，回傳一個函式，藉此延長參數的生命週期到另一個函式裡(閉包)，
+        //    在另一個函式尚未執行前，參數依舊會保存著
+        function double(i) {
+            return function () {
+                var x = i * 2;
+                console.log("x = " + x);
+            };
+        };
+        var calc = double(10);
+        calc(); // x = 20
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

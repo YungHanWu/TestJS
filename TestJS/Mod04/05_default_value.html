@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //old 1
+        //function add(a, b) {
+        //    var b = (typeof b !== 'undefined') ? b : 0;
+        //    return a + b;
+        //}
+        //console.log(add()); // NaN
+        //console.log(add(5)); // 5
+        //console.log(add(5, 3)); // 8
+
+        //old 2
+        //function add(a, b) {
+        //    var a = (typeof a !== 'undefined') ? a : 0;
+        //    var b = (typeof b !== 'undefined') ? b : 0;
+        //    return a + b;
+        //}
+        //console.log(add()); // 0
+        //console.log(add(5)); // 5
+        //console.log(add(5, 3)); // 8
+
+        //new
+        function add(a = 0, b = 0) {
+            return a + b;
+        }
+        console.log(add()); // 0
+        console.log(add(5)); // 5
+        console.log(add(5, 3)); // 8
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
