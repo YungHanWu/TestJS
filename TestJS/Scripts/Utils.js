@@ -23,3 +23,23 @@ let sum = (name, ...scores) => {
     }
     return name + " 的總分 = " + total;
 }
+
+let dice = () => {
+
+    var num1 = Math.floor(Math.random() * 6 + 1);
+    var num2 = Math.floor(Math.random() * 6 + 1);
+    var num3 = Math.floor(Math.random() * 6 + 1);
+    var total = num1 + num2 + num3;
+
+    var msg = "開 ";
+
+    if (num1 == num2 && num2 == num3)
+        msg = num1 + ", " + num2 + ", " + num3 + " 豹子通殺!!";
+    else {
+        msg += total % 2 == 0 ? "雙 " : "單 ";
+        msg += num1 + ", " + num2 + ", " + num3 + "  " + total + "點 ";
+        msg += total >= 4 && total <= 10 ? "小" : "大";
+    }
+
+    return [msg, num1, num2, num3];
+}
