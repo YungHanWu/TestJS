@@ -16,12 +16,12 @@
         function diceStop() {
             document.getElementById("a1").pause();
 
-            var r = dice();
+            var [msg,num1,num2,num3] = dice();
             
-            document.getElementById("msg").innerText = r[0];
-            document.getElementById("dice1").src = "../Images/dice-" + r[1] + ".png";
-            document.getElementById("dice2").src = "../Images/dice-" + r[2] + ".png";
-            document.getElementById("dice3").src = "../Images/dice-" + r[3] + ".png";
+            document.getElementById("msg").innerText = msg;
+            document.getElementById("dice1").src = `../Images/dice-${num1}.png`;
+            document.getElementById("dice2").src = `../Images/dice-${num2}.png`;
+            document.getElementById("dice3").src = `../Images/dice-${num3}.png`;
         }
 
 

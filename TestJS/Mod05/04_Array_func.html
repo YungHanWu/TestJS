@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        var ar = ["Mary", 100, new Date("2018/1/2")];
+
+        //1,
+        console.log(ar.toString()); // Mary,100,Thu Jan 2 00:00:00 UTC 2018
+        console.log(ar.valueOf()); // Mary,100,Thu Jan 2 00:00:00 UTC 2018
+        console.log(ar);
+
+        //2,
+        console.log(ar.join(" ---- "));//Mary-100-Thu Jan 2 00:00:00 UTC 2018
+        console.log(ar.join("|"));//Mary$100$Thu Jan 2 00:00:00 UTC 2018
+        console.log("-----------------------------");
+
+        //3, stack (FILO)
+        var ar = [];
+        ar.push("Spring");
+        ar.push("Summer");
+        ar.push("Autumn");
+        ar.push("Winter");
+        console.log(ar.pop());  // Winter
+        console.log(ar.pop());  // Autumn
+        console.log(ar.pop());  // Summer
+        console.log(ar.pop());  // Spring
+        console.log("-----------------------------");
+
+        //4, queue (FIFO)
+        var ar = [];
+        ar.push("Spring");
+        ar.push("Summer");
+        ar.push("Autumn");
+        ar.push("Winter");
+        console.log(ar.shift());  // Spring 
+        console.log(ar.shift());  // Summer 
+        console.log(ar.shift());  // Autumn
+        console.log(ar.shift());  // Winter
+        console.log("-----------------------------");
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

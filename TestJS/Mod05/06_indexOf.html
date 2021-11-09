@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        var ar = ["Spring", "Summer", "Autumn", "Winter"];
+
+        console.log(ar.indexOf("Summer")); // 1
+        console.log(ar.indexOf("aa")); // -1
+
+        //old
+        console.log(ar.indexOf("Summer") > -1); // true
+        console.log(ar.indexOf("aa") > -1); // false
+
+        //ES7 new
+        console.log(ar.includes("Summer")); // true
+        console.log(ar.includes("aa")); // false
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

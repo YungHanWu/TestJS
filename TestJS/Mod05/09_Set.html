@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1,
+        //let set = new Set();
+        //set.add(10);
+        //set.add(20);
+        //set.add(30);
+        //set.add(10);
+        let set = new Set([10, 20, 30]);
+
+        console.log(set.size); // 3 
+        console.log(set);
+        console.log(Array.from(set));
+
+        //2,
+        //var cities = new Set();
+        //cities.add("台北市");
+        //cities.add("新北市");
+        //cities.add("高雄市");
+        //cities.add("台北市");
+        var cities = new Set(["台北市", "新北市", "高雄市"]);
+
+        console.log(cities.has("高雄市")); //true
+        console.log(cities.has("台南市")); //false
+        if (!cities.has("台南市"));
+            cities.add("台南市");
+        if (cities.has("高雄市"))
+            cities.delete("高雄市");
+
+        //cities.clear();
+
+        cities.forEach(v => console.log(v));
+
+        console.log(cities);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

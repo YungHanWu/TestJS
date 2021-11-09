@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //Test Data
+        var data = [10, 13, 58, 42, 21]; // 奇偶數
+        //var data = [11, 13, 59, 43, 21]; // 全部奇數
+        //var data = [10, 14, 58, 42, 26]; // 全部偶數
+        var scores = [92, 86, 100, 57, 63];
+
+        //1, old
+        //function test(ar) {
+        //    var result = true;
+        //    for (var num of ar) {
+        //        if (num % 2 != 0) {
+        //            result = false;
+        //            break;
+        //        }
+        //    }
+        //    return result;
+        //}
+        //console.log(test(data)); 
+
+        //2, every
+        //function checkEven(num) {
+        //    return num % 2 == 0;
+        //}
+        //console.log(data.every(checkEven));
+        //console.log(data.every(function (num) {
+        //    return num % 2 == 0;
+        //}));
+        //console.log(data.every(num => num % 2 == 0));
+
+        //3, every
+        //console.log("是不是每一科都及格? " + scores.every(score => score >= 60));
+
+        //4, some
+        //console.log("是不是含有偶數? " + data.some(num => num % 2 == 0));
+        //console.log("是不是有一科以上不及格? " + scores.some(score => score < 60));
+
+        //5-1, old
+        //var ar2 = [];
+        //for (var num of data) {
+        //    if (num % 2 == 0)
+        //        ar2.push(num);
+        //}
+        //console.log(ar2);
+
+        //5-2, filter
+        //var ar2 = data.filter(num => num % 2 == 0);
+        //console.log(ar2);
+        //var ar3 = scores.filter(score => score < 60);
+        //console.log(ar3);
+
+        //6-1, old
+        //console.log("原來的分數 = " + scores);
+        //var ar2 = [];
+        //for (var score of scores) {
+        //    ar2.push(score+=10);
+        //}
+        //console.log(ar2);
+
+        //6-2, map
+        //var ar3 = scores.map(score => score + 50);
+        //console.log(ar3);
+
+        //7, forEach
+        //old 1
+        for (var i = 0; i < scores.length; i++) {
+            console.log(i + " : " + scores[i]);
+        }
+        console.log("-----------------");
+        //old 2
+        for (var i in scores) {
+            console.log(i + " : " + scores[i]);
+        }
+        console.log("-----------------");
+        //new 1
+        scores.forEach(function (v, i, ary) {
+            console.log(i + " : " + v);
+            console.log(ary);
+        });
+        console.log("-----------------");
+        //new 2
+        scores.forEach(v => console.log(v));
+        console.log("-----------------");
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        console.log(Math.PI); // 3.141592653589793
+        console.log(Math.SQRT2); // .4142135623730951
+
+        var max = Math.max(10, 30, 80, 50);
+        console.log(max); // 80
+
+        var min = Math.min(10, 30, 80, 50);
+        console.log(min);    //10
+
+        var scores = [92, 86, 100, 57, 63];
+        console.log(Math.max(...scores)); //100
+        console.log(Math.min(...scores)); //57
+
+        //無條件捨去
+        var num = Math.floor(30.9);
+        console.log(num); // 30
+        var num = Math.floor(30.5);
+        console.log(num); // 30
+        var num = Math.floor(30.1);
+        console.log(num); // 30
+
+        //四捨五入
+        var num = Math.round(30.9);
+        console.log(num); // 31
+        var num = Math.round(30.5);
+        console.log(num); // 31
+        var num = Math.round(30.1);
+        console.log(num); // 30
+
+        //無條件進位
+        var num = Math.ceil(30.9);
+        console.log(num); // 31
+        var num = Math.ceil(30.5);
+        console.log(num); // 31
+        var num = Math.ceil(30.1);
+        console.log(num); // 31
+
+        //random
+        var num = Math.random();
+        console.log(num);
+
+        //次方
+        console.log(Math.pow(2, 3));  // 8
+        //ECMAScript 2016 （ES7）
+        console.log(2 ** 3); // 8
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

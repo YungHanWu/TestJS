@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, length
+        var s = new String("Hello JavaScript");
+        console.log(s.length); // 16
+
+        //2, concat
+        var s = "Hello ".concat("JavaScript", "!!");
+        console.log(s); // Hello JavaScript!!
+
+        //3, substring vs substr
+        var s = "Hello JavaScript";
+        console.log(s.substring(2, 3)); //l
+        console.log(s.substr(2, 3)); //llo
+
+        //4, indexOf vs lastIndexOf
+        var s = "Hello JavaScript.I love JavaScript.";
+        console.log(s.indexOf("JavaScript")); //6
+        console.log(s.lastIndexOf("JavaScript")); //24
+
+        //5, trim
+        var s = "     Hello JavaScript    ";
+        console.log("[" + s + "]");  //[     Hello JavaScript    ] 
+        console.log("[" + s.trim() + "]"); //[Hello JavaScript]
+
+        //6, toLowerCase vs toUpperCase
+        var s = "Hello JavaScript";
+        console.log(s.toLowerCase()); //hello javascript
+        console.log(s.toUpperCase()); //HELLO JAVASCRIPT
+
+        //7, search
+        var s = "Mary, Candy, Lilly, Judy";
+        var pos = s.search(/Mary|Candy/);
+        if (pos != -1) {
+            console.log(pos);  //0
+        }
+        else {
+            console.log("Not found!");
+        }
+
+        //8, ECMAScript 2017 （ES8）padStart vs padEnd
+        console.log('[' + 'abc'.padStart(10) + ']');
+        console.log('[' + 'World'.padStart(10, 'Hello') + ']');
+        console.log('[' + 'World'.padStart(15, 'Hello123') + ']');
+
+        console.log('[' + 'abc'.padEnd(10) + ']');
+        console.log('[' + 'World'.padEnd(10, 'Hello') + ']');
+        console.log('[' + 'World'.padEnd(10, 'Hello123') + ']');
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

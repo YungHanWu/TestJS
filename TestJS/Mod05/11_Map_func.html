@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        let map = new Map([
+            ["id", 1],
+            ["name", "john"],
+            ["email", "john@xxx.com"]
+        ]);
+
+        console.log(map.has("name")); //true
+        console.log(map.has("aa")); //false
+
+        //if (map.has("name"))
+        //    map.delete("name");
+
+        //map.clear();
+
+        map.forEach(function (v, k) {
+            console.log(k + " : " + v);
+        });
+
+        console.log("-----------------");
+        for (const k of map.keys()) {
+            console.log(k); // id name email
+        }
+        for (const v of map.values()) {
+            console.log(v); // 1 john john@xxx.com
+        }
+
+
+        console.log(map);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

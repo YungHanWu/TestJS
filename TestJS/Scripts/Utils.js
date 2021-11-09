@@ -34,10 +34,12 @@ let dice = () => {
     var msg = "開 ";
 
     if (num1 == num2 && num2 == num3)
-        msg = num1 + ", " + num2 + ", " + num3 + " 豹子通殺!!";
+        //msg = num1 + ", " + num2 + ", " + num3 + " 豹子通殺!!";
+        msg = `${num1},${num2},${num3} 豹子通殺!!`;
     else {
         msg += total % 2 == 0 ? "雙 " : "單 ";
-        msg += num1 + ", " + num2 + ", " + num3 + "  " + total + "點 ";
+        //msg += num1 + ", " + num2 + ", " + num3 + "  " + total + "點 ";
+        msg += `${num1},${num2},${num3} ${total} 點`
         msg += total >= 4 && total <= 10 ? "小" : "大";
     }
 

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, trim vs trimLeft vs trimRight
+        var s = "    Mary   ";
+        console.log("[" + s.trim() + "]"); // [Mary]
+        console.log("[" + s.trimLeft() + "]"); // [Mary   ]
+        console.log("[" + s.trimRight() + "]"); //[    Mary]
+
+        console.log("[" + s.trim() + "]"); // [Mary]
+        console.log("[" + s.trimStart() + "]"); // [Mary   ]
+        console.log("[" + s.trimEnd() + "]"); // [    Mary]
+
+        //2, indexOf vs includes
+        var s = 'Hi mary';
+        var keyword = 'mary';
+        console.log(s.indexOf(keyword) > -1); //true
+        console.log(s.indexOf("aa") > -1); //false
+        console.log(s.includes(keyword)); //true
+        console.log(s.includes("aa")); //false
+
+        //3, startsWith vs endsWith
+        var s = "This is a book";
+        console.log(s.startsWith("This")); // true
+        console.log(s.endsWith("book")); // true
+        console.log(s.startsWith("is", 5)); // true
+        console.log(s.endsWith("s", 7)); // true
+
+        //4, repeat
+        var s = "Hi";
+        console.log(s.repeat(10)); // HiHiHiHiHiHiHiHiHiHi
+        console.log("-".repeat(20));
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
