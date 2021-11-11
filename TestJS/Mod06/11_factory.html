@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, 物件工廠函式
+        function createEmployee(empName, age) {
+            var employee = new Object();
+            employee.empName = empName;
+            employee.age = age;
+            employee.getAge = function () {
+                return this.age;
+            };
+            return employee;
+        }
+
+        //2,
+        var emp1 = createEmployee("John", 25);
+        var emp2 = createEmployee("Mary", 30);
+        console.log(emp1);
+        console.log(emp2);
+
+        //3, 功能重複定義
+        console.log(emp1.empName == emp2.empName); //false
+        console.log(emp1.getAge == emp2.getAge); //false  function 之間比較記憶體位置
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

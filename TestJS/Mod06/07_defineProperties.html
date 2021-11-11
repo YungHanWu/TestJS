@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, public data member
+        //var employee = {
+        //    empName: "Mary",
+        //    age: 29
+        //}
+
+        //2,
+        var employee = {};
+
+        Object.defineProperties(employee, {
+
+            "empName": {
+                configurable: true,
+                writable: false,
+                value: "John"
+            },
+            "age": {
+                configurable: false,
+                writable: true,
+                value: 23
+            }
+
+        });
+
+ 
+        employee.empName = "xxx";
+        employee.age++;
+        //delete employee.empName;
+
+        console.log(employee);
+
+        //ES8 new
+        var desc = Object.getOwnPropertyDescriptors(employee);
+        console.log(desc)
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

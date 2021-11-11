@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1,
+        //var emp = new Object();
+        //emp.name = "John";
+        //emp.age = 25;
+
+        //2,
+        //var emp = {
+        //    name: "Mary",
+        //    age: 30
+        //};
+        //var emp = {
+        //    "name": "Mary",
+        //    "age": 30
+        //};
+        //var emp = {
+        //    'name': "Mary",
+        //    'age': 30
+        //};
+        var emp = {
+            'name': "Mary",
+            'age': 30,
+            'last-name': "Chen"
+        };
+
+        //console.log(`${emp.name} -- ${emp.age} -- ${emp["last-name"]}`);
+        console.log(`${emp["name"]} -- ${emp["age"]} -- ${emp["last-name"]}`);
+        emp.name = "Amy";
+        emp["age"] = 32;
+        console.log(`${emp["name"]} -- ${emp["age"]} -- ${emp["last-name"]}`);
+
+        console.log("-".repeat(20));
+        for (var member in emp) {
+            console.log(member + " : " + emp[member]);
+        }
+
+        console.log(emp);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

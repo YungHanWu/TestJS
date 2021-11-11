@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, 建構函式
+        //function Employee(empName, age) {
+        //    this.empName = empName;
+        //    this.age = age;
+        //    this.getAge = function () {
+        //        return this.age;
+        //    };
+        //}
+        //var Employee = 10; //蓋過原來的建構函式
+
+        //2, 建構函式
+        //var Employee = function (empName, age) {
+        //    this.empName = empName;
+        //    this.age = age;
+        //    this.getAge = function () {
+        //        return this.age;
+        //    };
+        //}
+        //var Employee = 10; //蓋過原來的建構函式
+
+        //3, 建構函式
+        let Employee = function (empName, age) {
+            this.empName = empName;
+            this.age = age;
+            this.getAge = function () {
+                return this.age;
+            };
+        }
+        //let Employee = 10; //蓋過原來的建構函式
+
+        //Test
+        var emp1 = new Employee("John", 25);
+        var emp2 = new Employee("Mary", 30);
+        console.log(emp1);
+        console.log(emp2);
+
+        //功能重複定義
+        console.log(emp1.empName == emp2.empName); //false
+        console.log(emp1.getAge == emp2.getAge); //false
+
+        //類似C#的is
+        console.log(emp1 instanceof Object); // true
+        console.log(emp1 instanceof Employee); // true
+        console.log(emp2 instanceof Employee); // true
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

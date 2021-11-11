@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //old
+        //var employee = {
+        //    id: 1,
+        //    empName: "mary"
+        //};
+        //var id = employee.id;
+        //var empName = employee.empName;
+        //console.log(id); // 1
+        //console.log(empName); // mary
+
+        //ES6 new
+        //var employee = {
+        //    id: 2,
+        //    name: "john"
+        //};
+        //var { id, name } = employee; // （A） 初始設定式initializer  變數名稱要與屬性名稱一樣才能對應
+        //console.log(id); // 2
+        //console.log(name); // john
+
+        //ES8 new
+        let employee = {
+            id: 1,
+            name: "mary",
+            age: 25,
+        };
+        var data = Object.entries(employee);
+        console.log(data);
+
+        //for (var item of data) {
+        //    console.log(item[0] + " -- " + item[1]);
+        //}
+
+        for (const [key, value] of data) {
+            console.log(` ${key} : ${value} `);
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

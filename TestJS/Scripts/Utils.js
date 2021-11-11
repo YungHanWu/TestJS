@@ -2,11 +2,18 @@
  * Title : UCOM Utilities Script
  * Description: xxxxxxxxxxxxxx
  * Author: Jerry, John
- * Version: v0.2
+ * Version: v0.3
  */
-let Hello = () => alert("Hello!!");
+let Utils = {
+    author: "John",
+    version: "v0.3",
+    modifyDate: "2021/11/11",
+    Hello() {
+        alert("Hello!!");
+    }
+};
 
-let add = (x, y) => {
+Utils.add = (x, y) => {
     //if (typeof x != "number" || typeof y != "number")
     //    throw "參數必須是數值!!";
     if (typeof x != "number" || typeof y != "number") {
@@ -16,7 +23,7 @@ let add = (x, y) => {
     return x + y;
 }
 
-let sum = (name, ...scores) => {
+Utils.sum = (name, ...scores) => {
     var total = 0;
     for (var score of scores) {
         total += score;
@@ -24,7 +31,7 @@ let sum = (name, ...scores) => {
     return name + " 的總分 = " + total;
 }
 
-let dice = () => {
+Utils.dice = () => {
 
     var num1 = Math.floor(Math.random() * 6 + 1);
     var num2 = Math.floor(Math.random() * 6 + 1);
@@ -34,13 +41,9 @@ let dice = () => {
     var msg = "開 ";
 
     if (num1 == num2 && num2 == num3)
-        //msg = num1 + ", " + num2 + ", " + num3 + " 豹子通殺!!";
-        msg = `${num1},${num2},${num3} 豹子通殺!!`;
+        msg = `${num1}, ${num2}, ${num3} 豹子通殺!!`;
     else {
-        msg += total % 2 == 0 ? "雙 " : "單 ";
-        //msg += num1 + ", " + num2 + ", " + num3 + "  " + total + "點 ";
-        msg += `${num1},${num2},${num3} ${total} 點`
-        msg += total >= 4 && total <= 10 ? "小" : "大";
+        msg += `${total % 2 == 0 ? "雙 " : "單 "} ${num1}, ${num2}, ${num3} ${total}點 ${total >= 4 && total <= 10 ? "小" : "大"}`;
     }
 
     return [msg, num1, num2, num3];

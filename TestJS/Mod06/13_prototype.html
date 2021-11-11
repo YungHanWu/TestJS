@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, 隱藏關聯
+        //var obj = {
+        //    name: "John"
+        //};
+        //console.log(obj.toString());
+        //console.log(obj);
+
+        //2, 建構函式
+        //let Employee = function (empName, age) {
+        //    this.empName = empName;
+        //    this.age = age;
+        //}
+        //Employee.prototype = {
+        //    constructor: Employee, //因為我們用了一個新的物件取代原來的物件，所以自己寫code加回來
+        //    getAge: function () {
+        //        return this.age;
+        //    }
+        //};
+
+        //3, 建構函式
+        let Employee = function (empName, age) {
+            this.empName = empName;
+            this.age = age;
+        }
+        Employee.prototype.getAge = function () {
+            return this.age;
+        }
+
+        //Test
+        var emp1 = new Employee("John", 25);
+        var emp2 = new Employee("Mary", 30);
+        console.log(emp1);
+        console.log(emp2);
+
+        //功能重複定義
+        console.log(emp1.empName == emp2.empName); //false
+        console.log(emp1.getAge == emp2.getAge); //true
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

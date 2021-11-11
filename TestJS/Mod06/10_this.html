@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+
+        //1,
+        //window.empName = "Candy";
+        //var employee = { empName: "Mary" };
+
+        //function getName() {
+        //    return this.empName;
+        //}
+        //alert(window.getName()); // Candy
+
+        //employee.aa = getName;
+        //alert(employee.aa()); // Mary
+
+
+        //2,
+        function test() {
+            console.log(this); //window
+        }
+
+        //3,
+        function test2(e) {
+            console.log(e);
+        }
+
+    </script>
+</head>
+<body>
+
+    <input id="Button1" type="button" value="button" onclick="test();" />
+    <input id="Button2" type="button" value="button" onclick="test2(this);" />
+
+</body>
+</html>
