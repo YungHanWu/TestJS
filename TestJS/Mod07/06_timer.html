@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //開啟新視窗每秒移動一次 5秒後暫停
+        function test1() {
+
+            var win = window.open("myWindow.html", "aa", "width=300, height=300, left=300, top=200");
+            var timer1 = setInterval(function () {
+                win.moveBy(10, 10);
+            }, 1000);
+
+            setTimeout(function () {
+                clearInterval(timer1);
+            },5000);
+
+        }
+
+        //5秒後開啟新視窗 然後每秒移動一次
+        function test2() {
+
+            setTimeout(function () {
+
+                var win = window.open("myWindow.html", "aa", "width=300, height=300, left=300, top=200");
+                var timer1 = setInterval(function () {
+                    win.moveBy(10, 10);
+                }, 1000);
+
+            }, 5000);
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <input id="Button1" type="button" value="Open Window" onclick="test1();" />
+    <input id="Button1" type="button" value="Open Window2" onclick="test2();" />
+
+</body>
+</html>

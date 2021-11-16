@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        var win;
+
+        function test1() {
+            //window.open("myWindow.html", "_self");
+        //    window.open("myWindow.html", "_blank");
+        //    window.open("myWindow.html", "aa");
+            win = window.open("myWindow.html", "aa", "width=300, height=300, left=300, top=200");
+        }
+
+        function test2() {
+            win.moveTo(200, 300);
+        }
+
+        function test3() {
+            win.moveBy(10, 10);
+        }
+
+    </script>
+</head>
+<body>
+
+    <input id="btnOpen" type="button" value="Open" onclick="test1();" />
+    <input id="btnMoveTo" type="button" value="Move To 200, 300" onclick="test2();" />
+    <input id="btnMoveBy" type="button" value="Move By 10, 10" onclick="test3();" />
+
+</body>
+</html>

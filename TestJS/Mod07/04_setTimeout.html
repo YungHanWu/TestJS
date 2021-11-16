@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        var timer1;
+
+        function test1() {
+
+            timer1 = setTimeout(function () {
+                alert("Hello");
+            }, 3000);
+
+        }
+
+        function test2() {
+            clearTimeout(timer1);
+        }
+
+    </script>
+</head>
+<body>
+
+    <input id="Button1" type="button" value="Set" onclick="test1();" />
+    <input id="Button2" type="button" value="Stop" onclick="test2();" />
+
+</body>
+</html>

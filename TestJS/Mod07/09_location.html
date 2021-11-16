@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <a href="09_location.html?name=John&age=30#div1">09_location.html</a>
+
+    <script>
+
+        console.log(window.location);
+
+        var queryString = location.search.substring(1),
+            items = queryString.split("&"),
+            item = null,
+            len = items.length;
+
+        for (i = 0; i < len; i++) {
+            item = items[i].split("=");
+            console.log(item[0] + "," + item[1]);
+        }
+
+    </script>
+
+
+</body>
+</html>

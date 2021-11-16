@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>(23)Facebook</title>
+    <script>
+
+        document.title = "(56)Facebook";
+
+    </script>
+</head>
+<body>
+
+    <a href="01_alert.html">01_alert.html</a>
+    <a href="02_global_scope.html">02_global_scope.html</a>
+    <a href="03_window_open.html">03_window_open.html</a>
+    <hr />
+
+    <img src="../Images/000002_1626141723.jpg" />
+    <img src="../Images/000002_1636537254.jpg" />
+    <img src="../Images/000002_1637033457.jpg" />
+    <hr />
+
+
+    <form method="post" name="form1" id="form1">
+        <fieldset>
+            <legend> 個人資料 </legend>
+            <label class="lbl txt" for="first-name"> First name: </label> <br />
+            <input type="text" id="first-name" name="FirstName" value="Mary" /> <br />
+            <label class="lbl" for="last-name"> Last name: </label> <br />
+            <input type="text" id="last-name" name="LastName" value="Su" /> <br />
+            <label class="lbl" for="email-address"> Email address: </label> <br />
+            <input type="email" id="email-address" name="EmailAddress" value="Mary@test.com" /> <br />
+            <label class="lbl" for="password"> Choose a password: </label> <br />
+            <input type="password" id="password" name="Password" value="123" /> <br />
+            <label class="lbl" for="confirm-password"> Confirm your password: </label> <br />
+            <input type="password" id="confirm-password" name="ConfirmPassword" value="123" /> <br />
+            <label class="lbl" for="website"> Website/blog: </label> <br />
+            <input type="url" id="website" name="WebsiteUrl" value="http://mary.test.com" /> <br />
+            <button type="submit"> Register </button>
+        </fieldset>
+    </form>
+
+    <form action="/" method="post" name="form2" id="form2"></form>
+
+    <script>
+
+        console.log(document.images);
+        console.log(document.links);
+        console.log(document.forms);
+
+    </script>
+
+</body>
+</html>

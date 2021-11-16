@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, Employee建構函式
+        var Employee = function (empName, age) {
+            //類似private
+            var _empName, _age = 0;
+
+            //類似property
+            //Object.defineProperty(this, "empName", {
+            //    get: function () {
+            //        return _empName;
+            //    },
+            //    set: function (newName) {
+            //        _empName = newName;
+            //    }
+            //});
+            //Object.defineProperty(this, "age", {
+            //    get: function () {
+            //        return _age;
+            //    },
+            //    set: function (age) {
+            //        if (age > 0 && age < 150)
+            //            _age = age;
+            //    }
+            //});
+
+            //定義多個屬性
+            Object.defineProperties(this, {
+                "empName": {
+                    get: function () {
+                        return _empName;
+                    },
+                    set: function (newName) {
+                        _empName = newName;
+                    }
+                },
+                "age": {
+                    get: function () {
+                        return _age;
+                    },
+                    set: function (age) {
+                        if (age > 0 && age < 150)
+                            _age = age;
+                    }
+                }
+            });
+
+            // 建構函式程式邏輯 
+            this.empName = empName;
+            this.age = age;
+        }
+
+        //Test Code:
+        var emp = new Employee("John", -25);
+        console.log(emp.empName + " -- " + emp.age);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

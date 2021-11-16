@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, Employee建構函式
+        var Employee = function (empName, age) {
+            var _empName, _age = 0;
+            this.getName = function () {
+                return _empName;
+            }
+            this.setName = function (empName) {
+                _empName = empName;
+            }
+            this.getAge = function () {
+                return _age;
+            }
+            this.setAge = function (age) {
+                if (age > 0 && age < 150)
+                    _age = age;
+            }
+            // 建構函式程式邏輯 
+            //_empName = empName;
+            this.setName(empName); //這樣才有機會驗證輸入
+            this.setAge(age);
+        }
+
+        //Test Code:
+        var emp = new Employee("John", 25);
+        console.log(emp.getName() + " -- " + emp.getAge());
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

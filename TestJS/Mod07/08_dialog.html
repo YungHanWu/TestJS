@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        function test1() {
+            window.print();
+        }
+
+        function test2() {
+            if (confirm("Go to UUU?")) {
+                window.location = "https://www.uuu.com.tw";
+            }
+        }
+
+        function test3() {
+            var day = prompt("輸入 1~7:", "7");
+            var msg = "今天是";
+            switch (day.toLowerCase()) {
+                case '1': msg += "星期一"; break;
+                case '2': msg += "星期2"; break;
+                case '3': msg += "星期3"; break;
+                case '4': msg += "星期4"; break;
+                case '5': msg += "星期5"; break;
+                case '6': msg += "星期6"; break;
+                case '7': msg += "星期天"; break;
+                default: msg = "輸入的資料超出範圍"; break;
+            };
+            alert(msg);
+        }
+
+    </script>
+</head>
+<body>
+
+    <input id="Button1" type="button" value="Print" onclick="test1();" />
+    <input id="Button2" type="button" value="Confirm" onclick="test2();" />
+    <input id="Button3" type="button" value="Prompt" onclick="test3();" />
+
+
+</body>
+</html>

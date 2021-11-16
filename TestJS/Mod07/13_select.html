@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        function test1() {
+
+            var opt = document.createElement("option");
+            opt.value = "blue";
+            opt.textContent = "藍色";
+            document.getElementById("Select1").appendChild(opt);
+
+        }
+
+    </script>
+</head>
+<body>
+
+    Color :
+    <select id="Select1">
+        <option value="red">紅色</option>
+
+    </select>
+
+    <input id="Button1" type="button" value="Add Blue" onclick="test1();" />
+
+
+</body>
+</html>
