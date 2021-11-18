@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        //1, 1 object
+        var emp = { name: "John", age: 25 };
+
+        var s = JSON.stringify(emp);
+        console.log(s);
+
+        var obj = JSON.parse(s);
+        console.log(obj.name + " -- " + obj.age);
+
+        //2, array
+        var employees = [
+            { name: "John", age: 25 },
+            { name: "Mary", age: 28 },
+            { name: "Tony", age: 35 }
+        ];
+
+        var s = JSON.stringify(employees);
+        console.log(s);
+
+        var obj = JSON.parse(s);
+        for (var emp of obj) {
+            console.log(emp.name + " -- " + emp.age);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

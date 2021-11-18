@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        window.onload = function () {
+
+            document.getElementById("Button1").onclick = function (event) {
+
+                //console.log(this.id); //Button1
+                //console.log(event.target.id); //Button1
+
+                function test() {
+
+                    console.log(this.id); //undefined
+                    console.log(event.target.id); //Button1
+
+                }
+                test();
+
+            };
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <input id="Button1" type="button" value="Click Me" />
+
+</body>
+</html>

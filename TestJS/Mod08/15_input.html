@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <input type="text" name="txt" id="txt" value="" />
+    <div id="result"> </div>
+    <script>
+    var txt = document.getElementById("txt");
+    txt.addEventListener('input', function ( event ) {
+      var result = document.getElementById("result");
+        result.innerHTML = event.target.value;
+    });
+    </script>
+
+
+</body>
+</html>

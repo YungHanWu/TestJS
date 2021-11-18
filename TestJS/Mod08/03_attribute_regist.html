@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        function test1(ev) {
+            ev.style.backgroundColor = 'yellow';
+        }
+
+        function test2() {
+            event.target.style.backgroundColor = 'yellow';
+        }
+
+    </script>
+</head>
+<body>
+
+    <input id="Button1" type="button" value="Click Me" onclick="this.style.backgroundColor = 'yellow';" />
+
+    <input id="Button2" type="button" value="Click Me" onclick="test1(this);" />
+
+    <input id="Button3" type="button" value="Click Me" onclick="event.target.style.backgroundColor = 'yellow';" />
+
+    <input id="Button4" type="button" value="Click Me" onclick="test2();" />
+    <!--event.target 相當於 this --> 
+</body>
+</html>

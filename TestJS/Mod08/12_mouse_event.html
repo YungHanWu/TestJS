@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #div1 {
+            border: 1px dashed blue;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <script>
+
+        window.onload = function () {
+
+            var div1 = document.getElementById("div1");
+            var result = document.getElementById("result");
+
+            div1.onmouseenter = function () {
+                result.innerText = "Mouse Enter";
+            }
+
+            div1.onmouseout = function () {
+                result.innerText = "Mouse Out";
+            }
+
+            div1.onmousemove = function (event) {
+                result.innerText = event.x + ", " + event.y;
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <div id="div1"> </div>
+    <div id="result">... </div>
+
+
+</body>
+</html>

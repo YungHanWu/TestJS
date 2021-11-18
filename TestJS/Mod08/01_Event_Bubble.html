@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+        div{
+            width:300px;
+            height:200px;
+            background:pink;
+        }
+
+    </style>
+    <script>
+
+        function test1() {
+            alert("a clicked!!");
+        }
+
+        function test2() {
+            alert("div clicked!!");
+        }
+
+        function test3() {
+            alert("body clicked!!");
+        }
+
+    </script>
+</head>
+<body onclick="test3()">
+
+    <div onclick="test2();">
+
+        <a onclick="test1();" href="https://www.google.com/">Google</a>
+
+    </div>
+
+</body>
+</html>

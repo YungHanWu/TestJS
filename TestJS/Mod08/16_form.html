@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+
+    <script>
+
+        window.addEventListener("DOMContentLoaded", function () {
+
+            var allTextbox = document.querySelectorAll("input[type='text'],input[type='tel'],input[type='number']");
+            for (var i = 0; i < allTextbox.length; i++) {
+                allTextbox[i].addEventListener("focus", function (event) {
+                    this.style.backgroundColor = "yellow";
+                })
+                allTextbox[i].addEventListener("blur", function (event) {
+                    this.style.backgroundColor = "white";
+                })
+            }
+
+
+            var userName = document.getElementById("userName");
+            userName.focus();
+
+            var phoneNo = document.getElementById("phoneNo");
+            phoneNo.addEventListener("keypress", function (event) {
+                if (!/\d/.test(String.fromCharCode(event.charCode))) {
+                    event.preventDefault();
+                }
+            });
+
+            var dept = document.getElementById("dept");
+            dept.addEventListener("change", function (event) {
+                for (var i = 0; i < dept.options.length; i++) {
+                    if (dept.options[i].selected) {
+                        var deptNo = document.getElementById("deptNo");
+                        deptNo.innerHTML = "部門代碼:" + dept.options[i].value;
+                        break;
+                    }
+                }
+            });
+
+
+            var form1 = document.getElementById("form1");
+            form1.addEventListener("submit", function (event) {
+                var ageInput = document.getElementById("age"),
+                    age = parseInt(ageInput.value);
+                if (!(age >= 1 && age <= 120)) {
+                    alert("Age is invalid. Please specify a value between 1 and 120");
+                    event.preventDefault();
+                }
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <form id="form1" action="Server.aspx" method="post">
+        <div>
+            請輸入個人資料:<br />
+            <br />
+            姓名 : <input class="green" type="text" name="userName" id="userName" value="Mary" required="required" /> <br />
+            地址 : <input class="red" type="text" name="addr" id="addr" value="Fu shing N. Rd" /> <br />
+            年齡 : <input class="blue" type="number" name="age" id="age" value="30" /> <br />
+            職稱 : <input class="blue" type="text" name="title" id="title" value="CEO" /> <br />
+            電話號碼 :
+            <input type="tel" name="phoneNo" id="phoneNo" value="12345657" /> <br />
+            <br />
+            選取你喜歡的興趣 : <br />
+            爬山<input type="checkbox" name="interest" id="interest1" value="1" checked="checked" /> <br />
+            遊泳<input type="checkbox" name="interest" id="interest2" value="2" /> <br />
+            逛街<input type="checkbox" name="interest" id="interest3" value="3" /> <br />
+
+            <br />
+            部門 : <br />
+            <select id="dept" name="dept">
+                <option value="0"> 請選取 </option>
+                <option value="001"> 電腦部 </option>
+                <option value="002"> 會計部 </option>
+                <option value="003"> 業務部 </option>
+            </select> <span id="deptNo"> </span>
+        </div>
+        <input id="btnSubmit" type="submit" name="submit" value="Submit" />
+        <input id="btnReset" type="reset" name="submit" value="Reset" />
+    </form>
+
+</body>
+</html>

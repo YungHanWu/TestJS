@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        window.onload = function () {
+
+            document.getElementById("btnGet").onclick = function (event) {
+
+                //1, 建立XMLHttpRequest物件
+                var req = new XMLHttpRequest();
+                //2, 取得網址
+                var url = document.getElementById("txtUrl").value;
+                //3, 註冊readystatechange事件
+                req.onreadystatechange = function () {
+                    //4, 檢查是否已經到了收完Response的結果的階段
+                    if (req.readyState === 4) {
+                        //5, 判斷HTTP狀態碼是否為正常的200 OK
+                        if (req.status == 200) {
+                            //6, 取得Response的結果並決定顯示的方式
+                            document.getElementById("result").innerHTML = req.responseText;
+                        }
+                        else
+                            alert(req.status + " : " + req.statusText);
+
+                        event.target.disabled = false;
+                    }
+                }
+
+                //6, 建立連線
+                req.open("GET", url, true); //非同步
+                //7, 送出request
+                req.send();
+                //document.getElementById("result").innerHTML = "執行中，請稍候~";
+                document.getElementById("result").innerHTML = "<img src='/Images/sa.gif'>";
+                event.target.disabled = true;
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+    URL : <input id="txtUrl" type="text" value="demo.html" />
+    <input id="btnGet" type="button" value="GET" />
+    <hr />
+    <div id="result">...</div>
+
+</body>
+</html>

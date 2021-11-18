@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        window.onload = function () {
+
+            document.getElementById("Button1").onclick = function (event) {
+                //this.style.backgroundColor = "pink";
+                //在IE 10之前需要在fuction加上參數event 至於之後的可加可不加
+                event.target.style.backgroundColor = "pink";
+            };
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <input id="Button1" type="button" value="Click Me" />
+
+</body>
+</html>

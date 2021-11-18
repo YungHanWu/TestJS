@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        function test1() {
+            alert("Test 1...");
+        }
+
+
+        function test2() {
+            alert("Test 2...");
+        }
+
+        function test4() {
+            alert("Test 4...");
+        }
+
+        //window.onload = function () {
+
+        //    document.getElementById("Button2").onclick = test2;
+
+        //    document.getElementById("Button3").onclick = function () {
+        //        alert("Test 3...");
+        //    };
+
+        //    document.getElementById("Button4").addEventListener("click", test4);
+
+        //    document.getElementById("Button5").addEventListener("click", function () {
+        //        alert("Test 5...");
+        //    });
+        //};
+
+        window.addEventListener("load", function () {
+            document.getElementById("Button2").onclick = test2;
+
+            document.getElementById("Button3").onclick = function () {
+                alert("Test 3...");
+            };
+
+            document.getElementById("Button4").addEventListener("click", test4);
+
+            document.getElementById("Button5").addEventListener("click", function () {
+                alert("Test 5...");
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <!--onload="xxx"-->
+
+    <input id="Button1" type="button" value="Click Me (Attribute)" onclick="test1();" />
+    <input id="Button2" type="button" value="Click Me (DOM Level 0)" />
+    <input id="Button3" type="button" value="Click Me (DOM Level 0)" />
+    <input id="Button4" type="button" value="Click Me (DOM Level 2)" />
+    <input id="Button5" type="button" value="Click Me (DOM Level 2)" />
+
+
+</body>
+</html>
