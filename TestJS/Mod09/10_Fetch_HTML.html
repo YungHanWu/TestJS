@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        window.onload = function () {
+
+            document.getElementById("btnGet").onclick = function (event) {
+
+                async function ajax(url) {
+
+                    let response = await fetch(url);
+                    if (response.ok) {
+                        response.text().then(function (result) {
+                            document.getElementById("result").innerHTML = result;
+                        })
+                    } else {
+                        document.getElementById("result").innerHTML = "";
+                        alert(response.status + " : " + response.statusText);
+                    }
+                    event.target.disabled = false;
+                }
+
+                ajax(document.getElementById("txtUrl").value);
+
+                document.getElementById("result").innerHTML = "<img src='/Images/sa.gif'>";
+                event.target.disabled = true;
+
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+
+    URL : <input id="txtUrl" type="text" value="demo.html" />
+    <input id="btnGet" type="button" value="GET" />
+    <hr />
+    <div id="result">...</div>
+
+</body>
+</html>

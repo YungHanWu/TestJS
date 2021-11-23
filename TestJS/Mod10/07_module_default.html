@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script  type="module">
+
+        //1, 使用原名稱
+        //import sayhello from "/Scripts/mymodule.js";
+        //console.log(sayhello("Mary"));
+
+        //2, 不須使用as就能匯入default的匯出
+        //import aaa from "/Scripts/mymodule.js";
+        //console.log(aaa("Mary"));
+
+        //3, 使用as但是要加{}，匯入default的匯出
+        //import { default as yy } from "/Scripts/mymodule.js";
+        //console.log(yy("Mary"));
+
+        //4, 匯入default跟其他成員
+        //import { modName, id, PI, Employee } from "/Scripts/mymodule.js";
+        //import { default as greeting } from "/Scripts/mymodule.js";
+        //console.log(modName);
+        //console.log(id);
+        //console.log(PI);
+        //console.log(greeting("mary"));
+        //let emp = new Employee(1, "candy");
+        //emp.printInfo();
+
+
+        //5, 匯入default跟其他成員
+        //import greeting, { modName, id, PI, Employee } from "/Scripts/mymodule.js";
+        //console.log(modName);
+        //console.log(id);
+        //console.log(PI);
+        //console.log(greeting("mary"));
+        //let emp = new Employee(1, "candy");
+        //emp.printInfo();
+
+
+        //6, 匯入default跟其他成員
+        import greeting, * as aa from "/Scripts/mymodule.js";
+        console.log(aa.modName);
+        console.log(aa.id);
+        console.log(aa.PI);
+        console.log(greeting("mary"));
+        let emp = new aa.Employee(1, "candy");
+        emp.printInfo();
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

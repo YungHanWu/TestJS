@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        function work() {
+            return new Promise(function (reslove, reject) {
+
+                setTimeout(function () {
+                    console.log("次要工作: 買麵包");
+
+                    var ms = new Date().getMilliseconds();
+                    console.log(ms);
+                    if (ms % 2 == 0)
+                        reslove("有買到麵包");
+                    else
+                        reject("沒買到麵包");
+                }, 3000);
+
+            });
+        }
+
+        async function main() {
+            console.log("主要工作: 買菜start");
+
+            await work().then(function (result) {
+                console.log(result);
+            }).catch(function (result) {
+                console.log(result);
+            });
+
+            console.log("一起回家...");
+            console.log("主要工作: 買菜end");
+        }
+        main();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
